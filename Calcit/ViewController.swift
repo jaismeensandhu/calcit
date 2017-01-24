@@ -10,14 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
-   
+   // Buttosns Outlet References
     @IBOutlet weak var decimal: UIButton!
     @IBOutlet weak var displayLabel: UILabel!
+   
+    
+   // Variable Declaratiobns
     var isFirstDigit = true
     var operand1: Double = 0
-    var history = [String]()
     var operation = "="
     
+    
+    
+    // Returns Double value
     var displayValue: Double {
         get {
             
@@ -32,6 +37,8 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    // All the digits are conncted to below action
     @IBAction func touchDigit(_ sender: UIButton) {
         
         let digit = sender.currentTitle!
@@ -44,11 +51,15 @@ class ViewController: UIViewController {
         
     }
     
+    
+    // To Clear the display screen
     @IBAction func clearDisplay(sender: AnyObject) {
         displayValue = 0
         self.decimal.isEnabled = true
     }
     
+    
+    // After clicking any operation button
     @IBAction func saveOperand(sender: UIButton) {
         
         if (displayLabel.text == "Not a number")
@@ -65,7 +76,7 @@ class ViewController: UIViewController {
         
     }
     
-    
+    // To negate the value of displayed string
     @IBAction func negate(_ sender: UIButton) {
         if (displayLabel.text == "Not a number")
         {
@@ -77,6 +88,7 @@ class ViewController: UIViewController {
         }
     }
     
+    // Get percent value
     @IBAction func perc(_ sender: UIButton) {
         if (displayLabel.text == "Not a number")
         {
@@ -88,15 +100,9 @@ class ViewController: UIViewController {
         }
     }
     
-    
+    // Calculate operation executes after clicking the = button
     @IBAction func calculate(_ sender: UIButton) {
-        /*
-        // To diplay History
-        var value = String(operand1)+" "
-        value += operation+" "
-        value += String(displayValue)
-        value += " = "
-         */
+        
         if (displayLabel.text == "Not a number")
         {
             displayLabel.text = "Not a number"
@@ -128,10 +134,7 @@ class ViewController: UIViewController {
         }
         
        
-       /*
-         history += [value]
-         print(history)
-         */
+       
         }
         
     }
