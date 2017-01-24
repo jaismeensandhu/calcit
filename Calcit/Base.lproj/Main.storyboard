@@ -319,7 +319,7 @@
                                                 <rect key="frame" x="80" y="0.0" width="80" height="94.5"/>
                                                 <color key="backgroundColor" white="0.81936870809999995" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <state key="normal" title="00"/>
+                                                <state key="normal" title="power"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToButton" value="YES"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -327,7 +327,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9kz-cJ-eMb"/>
+                                                    <action selector="saveOperandWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PfS-sB-gY0"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBb-XU-n97">
@@ -388,24 +388,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="99.375" y="41.197183098591552"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="5Ua-P8-UN5">
-            <objects>
-                <viewController id="K6z-ul-kJd" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="eTM-Au-8B7"/>
-                        <viewControllerLayoutGuide type="bottom" id="wpM-F3-nCe"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="lGK-zh-tjM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Lig-Bg-u2X" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1130" y="31"/>
         </scene>
     </scenes>
 </document>

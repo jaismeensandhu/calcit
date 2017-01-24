@@ -50,19 +50,42 @@ class ViewController: UIViewController {
     }
     
     @IBAction func saveOperand(sender: UIButton) {
-        operation = sender.currentTitle!
-        operand1 = displayValue
-        isFirstDigit = true
-        self.decimal.isEnabled = true
+        
+        if (displayLabel.text == "Not a number")
+        {
+           displayLabel.text = "Not a number"
+        }
+        else
+        {
+            operation = sender.currentTitle!
+            operand1 = displayValue
+            isFirstDigit = true
+            self.decimal.isEnabled = true
+        }
+        
     }
     
     
     @IBAction func negate(_ sender: UIButton) {
-        displayValue = 0 - displayValue
+        if (displayLabel.text == "Not a number")
+        {
+            displayLabel.text = "Not a number"
+        }
+        else
+        {
+            displayValue = 0 - displayValue
+        }
     }
     
     @IBAction func perc(_ sender: UIButton) {
-        displayValue /= 100
+        if (displayLabel.text == "Not a number")
+        {
+            displayLabel.text = "Not a number"
+        }
+        else
+        {
+            displayValue /= 100
+        }
     }
     
     
@@ -74,33 +97,42 @@ class ViewController: UIViewController {
         value += String(displayValue)
         value += " = "
          */
-        
+        if (displayLabel.text == "Not a number")
+        {
+            displayLabel.text = "Not a number"
+        }
+        else
+        {
         switch operation {
+            
         case "/":
             
             if ((displayValue == 0) || (displayValue == 00))
             {
                 displayLabel.text = "Not a number"
-                isFirstDigit = true
                 self.decimal.isEnabled = true
+                isFirstDigit = true
                 
             }
             else
             {
-                displayValue = operand1 / displayValue;self.decimal.isEnabled = true
+                displayValue = operand1 / displayValue;
+                self.decimal.isEnabled = true
             }
             
         case "*":displayValue *= operand1;self.decimal.isEnabled = true
         case "+":displayValue += operand1;self.decimal.isEnabled = true
         case "-":displayValue = operand1 - displayValue;self.decimal.isEnabled = true
+        case "power":displayValue = operand1 - displayValue;self.decimal.isEnabled = true
         default:break
         }
         
        
        /*
-        history += [value]
-        print(history)*/
-        
+         history += [value]
+         print(history)
+         */
+        }
         
     }
     
