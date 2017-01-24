@@ -123,7 +123,7 @@ class ViewController: UIViewController {
         case "*":displayValue *= operand1;self.decimal.isEnabled = true
         case "+":displayValue += operand1;self.decimal.isEnabled = true
         case "-":displayValue = operand1 - displayValue;self.decimal.isEnabled = true
-        case "power":displayValue = operand1 - displayValue;self.decimal.isEnabled = true
+        case "power":displayValue = pow(operand1,displayValue);self.decimal.isEnabled = true
         default:break
         }
         
